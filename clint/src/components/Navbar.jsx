@@ -35,6 +35,7 @@ const SearchContainer = styled.div`
 const Input = styled.input`
     border: none;
     padding: 5px;
+    outline: none;
 `
 
 // Center Side
