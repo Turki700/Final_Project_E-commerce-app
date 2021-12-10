@@ -21,3 +21,21 @@ export const sliderItems = [
         bg: "fbf0f4"
     },
 ]
+
+export const categories = [
+    {
+      id: 1,
+      img: "https://images.pexels.com/photos/769733/pexels-photo-769733.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      title: "SHIRT STYLE",
+    },
+    {
+      id: 2,
+      img: "https://images.pexels.com/photos/4947747/pexels-photo-4947747.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      title: "WINTER STYLE",
+    },
+    {
+      id: 3,
+      img: "https://images.pexels.com/photos/8055369/pexels-photo-8055369.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      title: "JACKETS STYLE",
+    },
+  ];
