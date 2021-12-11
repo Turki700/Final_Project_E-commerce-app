@@ -67,7 +67,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const H3 = styled.h4`
+const TitleH3 = styled.h4`
     margin: 20px
 `
 
@@ -94,7 +94,7 @@ const Register = () => {
         <WrapperBetween />
         <WrapperTwo>
             <Title>Or</Title>
-            <H3>Create An Account By</H3>
+            <TitleH3>Create An Account By</TitleH3>
             <Button>Aother</Button>
         </WrapperTwo>
       </Wrapper>
