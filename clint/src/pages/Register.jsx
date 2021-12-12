@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {mobile} from '../responsive'
 
 const Container = styled.div`
   width: 100vw;
@@ -22,6 +23,7 @@ const Wrapper = styled.div`
     align-items: center;
     background-color: white;
     opacity: 0.9;
+    ${mobile({ width: "75%", flexDirection: "column" })}
 `;
 
 const WrapperOne = styled.div`
@@ -30,11 +32,13 @@ const WrapperOne = styled.div`
 const WrapperTwo = styled.div`
     flex: 1;
     text-align: center;
+    ${mobile({ marginTop: "20px" })}
 `
 const WrapperBetween = styled.div`
     border-left: 1px solid gray;
     height: 200px;
-    margin-left: 20px
+    margin-left: 20px;
+    ${mobile({ display: "none" })}
 `
 const Title = styled.h1`
   font-size: 24px;
@@ -68,7 +72,7 @@ const Button = styled.button`
 `;
 
 const TitleH3 = styled.h4`
-    margin: 20px
+    margin: 20px;
 `
 
 const Register = () => {

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {mobile} from '../responsive'
 
 
 const Container = styled.div`
@@ -13,6 +14,7 @@ const Image = styled.img`
     object-fit: cover;
     border-radius: 50px;
     opacity: 0.7;
+    ${mobile({ height: "30vh", borderRadius: "20px" })}
 `
 const Info = styled.div`
     position: absolute; 
