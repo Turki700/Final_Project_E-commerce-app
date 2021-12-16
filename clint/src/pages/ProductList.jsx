@@ -50,7 +50,6 @@ const ProductList = () => {
             [e.target.name]: value
         })
     }
-    console.log(cat.split("%20").join(' '));
     return ( 
         <Container>
             <Navbar />
