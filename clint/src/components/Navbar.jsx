@@ -3,8 +3,9 @@ import styled from 'styled-components'
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import { Badge } from '@material-ui/core';
 import {mobile} from '../responsive'
-import {useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import {Link} from 'react-router-dom'
+import { logout } from '../redux/userRedux';
 
 const Container = styled.div`
     height: 60px;
@@ -72,6 +73,13 @@ const MenuItems = styled.div`
 
 const Navbar = () => {
     const quantity = useSelector(state => state.cart.quantity)
+    const user = useSelector(state => state.user.currentUser)
+    const dipatch = useDispatch()
+
+    const handleLogout = () => {
+        dipatch(logout())
+    }
+
 
     return ( 
         <Container>
@@ -87,9 +95,17 @@ const Navbar = () => {
                     <Logo>TITLE.</Logo>
                 </Center>
                 <Right>
-                    <MenuItems>REGISTER</MenuItems>
-                    <MenuItems>SIGN IN</MenuItems>
-                    <Link to="/cart">
+                    {user ? <MenuItems onClick={handleLogout}>LOGOUT</MenuItems> : (
+                        <>
+                            <Link to="/register" className="link">
+                                <MenuItems>REGISTER</MenuItems>
+                            </Link>
+                            <Link to="/login" className="link">
+                                <MenuItems>SIGN IN</MenuItems>
+                            </Link>
+                        </>
+                    )}
+                    <Link to="/cart" className="link">
                         <MenuItems>
                             <Badge badgeContent={quantity} color="primary">
                                 <ShoppingCartOutlined />
