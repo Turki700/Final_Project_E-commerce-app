@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import SideBar from "./components/sidebar/SideBar";
 import TopBar from "./components/topBar/TopBar";
 import './app.css'
@@ -11,30 +11,37 @@ import ProductList from "./pages/productList/ProductsList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
 import Login from "./pages/login/Login";
+import {useSelector} from 'react-redux'
 
 function App() {
+  const user = useSelector(state => state.user.currentUser.isAdmin);
   return (
     <Router>
-      <TopBar />
 
-      {/* Other pages Section  */}
-      <div className="container">
-
-        {/* SideBar Section  */}
-        <SideBar />
-
+      {user ?
+        <Fragment>
+          <TopBar />
+          {/* Other pages Section  */}
+          <div className="container">
+            {/* SideBar Section  */}
+            <SideBar />
+            <Routes>
+              {/* Home Section  */}
+              <Route path="/" element={<Home />} />
+              <Route path="/users" element={<UserList />} />
+              <Route path="/user/:userId" element={<User />} />
+              <Route path="/newUser" element={<NewUser />} />
+              <Route path="/products" element={<ProductList />} />
+              <Route path="/product/:productId" element={<Product />} />
+              <Route path="/newProduct" element={<NewProduct />} />
+            </Routes>
+          </div>
+        </Fragment>
+        :
         <Routes>
-          {/* Home Section  */}
-          <Route path="/" element={<Home />} />
-          <Route path="/users" element={<UserList />} />
-          <Route path="/user/:userId" element={<User />} />
-          <Route path="/newUser" element={<NewUser />} />
-          <Route path="/products" element={<ProductList />} />
-          <Route path="/product/:productId" element={<Product />} />
-          <Route path="/newProduct" element={<NewProduct />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
         </Routes>
-      </div>
+      }
     </Router>
   );
 }

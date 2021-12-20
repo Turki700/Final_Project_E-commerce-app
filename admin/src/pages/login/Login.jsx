@@ -1,3 +1,4 @@
+import './login.css'
 import { useState } from "react";
 import {useDispatch} from 'react-redux'
 import { login } from "../../redux/apiCalls";
@@ -13,10 +14,15 @@ const Login = () => {
         login(dispatch,{username, password})
     }
     return ( 
-        <div>
-            <input type="text" placeholder="username..." onChange={e => setUsername(e.target.value)}/>
-            <input type="password" placeholder="password" onChange={e => setPassword(e.target.value)}/>
-            <button onClick={handleLogin}>Login</button>
+        <div className="login">
+            <div className="wrapper">
+                <h2 className="title">SIGN IN</h2>
+                <form className="form">
+                    <input type="text" placeholder="username" onChange={(e) => setUsername(e.target.value)} />
+                    <input placeholder="password" type="password" onChange={(e) => setPassword(e.target.value)} />
+                    <button onClick={handleLogin}>LOGIN</button>
+                </form>
+            </div>
         </div>
      );
 }
