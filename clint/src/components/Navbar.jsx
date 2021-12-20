@@ -6,6 +6,7 @@ import {mobile} from '../responsive'
 import {useDispatch, useSelector} from 'react-redux'
 import {Link} from 'react-router-dom'
 import { logout } from '../redux/userRedux';
+import { removeProducts } from '../redux/cartRedux';
 
 const Container = styled.div`
     height: 60px;
@@ -78,6 +79,7 @@ const Navbar = () => {
 
     const handleLogout = () => {
         dipatch(logout())
+        dipatch(removeProducts())
     }
 
 
