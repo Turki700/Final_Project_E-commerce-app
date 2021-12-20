@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "build": "cd clint && npm run build",
+    "install-client": "cd clint && npm install",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run build",
+    "start": "nodemon server.js",
+    "client": "cd clint && npm start"
   },
   "keywords": [],
   "author": "",
