@@ -175,7 +175,7 @@ const Cart = () => {
           tokenId: stripeToken.id,
           amount: cart.total * 100,
         })
-        navigate('/success', {data: res.data})
+        navigate('/success', {state: {data: res.data}})
       } catch (err) {
         console.log(err);
       }
