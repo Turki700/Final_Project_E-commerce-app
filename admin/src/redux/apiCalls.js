@@ -1,5 +1,5 @@
 import { publicRequest, userRequest } from "../requestMethods"
-import { deleteProductFailure, deleteProductStart, deleteProductSuccess, getProductFailure, getProductStart, getProductSuccess } from "./productsRedux"
+import { addProductSuccess, deleteProductSuccess, failure, getProductSuccess, start } from "./productsRedux"
 import { loginFailure, loginStart, loginSuccess } from "./userRedux"
 
 export const login = async (dispatch, userInfo) => {
@@ -13,21 +13,31 @@ export const login = async (dispatch, userInfo) => {
 }
 
 export const getProducts = async (dispatch) => {
-    dispatch(getProductStart())
+    dispatch(start())
     try {
         const res = await publicRequest.get("/products")
         dispatch(getProductSuccess(res.data))
     } catch (err) {
-        dispatch(getProductFailure())
+        dispatch(failure())
     }
 }
 
 export const deleteProduct = async (id, dispatch) => {
-    dispatch(deleteProductStart())
+    dispatch(start())
     try {
-        const res = await userRequest.delete(`/products/${id}`)
-        dispatch(deleteProductSuccess(res.data))
+        await userRequest.delete(`/products/${id}`)
+        dispatch(deleteProductSuccess(id))
     } catch (err) {
-        dispatch(deleteProductFailure())
+        dispatch(failure())
+    }
+}
+
+export const addProduct = async (product, dispatch) => {
+    dispatch(start())
+    try {
+        const res = await userRequest.post(`/products`, {product})
+        dispatch(addProductSuccess(res.data))
+    } catch (err) {
+        dispatch(failure())
     }
 }
