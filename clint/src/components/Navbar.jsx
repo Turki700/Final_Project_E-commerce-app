@@ -10,6 +10,7 @@ import { removeProducts } from '../redux/cartRedux';
 
 const Container = styled.div`
     height: 60px;
+    background-color: #fa600094;
     ${mobile({height: "50px"})}
 `;
 
@@ -44,6 +45,7 @@ const Input = styled.input`
     border: none;
     padding: 5px;
     outline: none;
+    background-color: transparent;
     ${mobile({width: "50px"})}
 `
 
@@ -94,7 +96,7 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Center>
-                    <Logo>TITLE.</Logo>
+                    <Logo>Hype.</Logo>
                 </Center>
                 <Right>
                     {user ? <MenuItems onClick={handleLogout}>LOGOUT</MenuItems> : (

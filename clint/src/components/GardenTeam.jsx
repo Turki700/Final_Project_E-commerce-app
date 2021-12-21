@@ -3,13 +3,13 @@ import styled from 'styled-components'
 const Container = styled.div`
     width: 100%;
     height: 30px;
-    background-color: #F5FAFD;
+    background-color: #2a5e77;
     display: flex;
     align-items: center;
     justify-content: center;
 `
 const Title = styled.h3`
-    color: #008080;
+    color: #fff;
 `
 
 const Image = styled.img`

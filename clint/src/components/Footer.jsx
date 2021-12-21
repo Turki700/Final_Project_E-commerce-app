@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 import { Facebook, Instagram, Mail, Phone, Pinterest, Room, Twitter } from '@material-ui/icons'
 import {mobile} from '../responsive'
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
     display: flex;
+    background-color: #fbeff4;
     ${mobile({ flexDirection: "column" })}
 `
 
@@ -77,7 +79,7 @@ const Footer = () => {
     return ( 
         <Container>
             <Left>
-                <Logo>TITLE.</Logo>
+                <Logo>Hype.</Logo>
                 <Desc>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, numquam incidunt. Repellat aspernatur ut accusantium dolorum voluptatum incidunt vero dicta tempora reiciendis. Asperiores voluptatibus tenetur mollitia minima beatae at aspernatur!</Desc>
                 <SocialContainer>
                     <SocialItem color="3B5999">
@@ -97,10 +99,10 @@ const Footer = () => {
             <Center>
                 <Title>Useful Links</Title>
                 <List>
-                    <ListItem>Home</ListItem>
-                    <ListItem>Cart</ListItem>
-                    <ListItem>Man Fashion</ListItem>
-                    <ListItem>Women Fashion</ListItem>
+                    <ListItem><Link to='/' className="link">Home</Link></ListItem>
+                    <ListItem><Link to='/cart' className="link">Cart</Link></ListItem>
+                    <ListItem>Man Hype</ListItem>
+                    <ListItem>Women Hype</ListItem>
                     <ListItem>Order Tracking</ListItem>
                     <ListItem>My Account</ListItem>
                     <ListItem>Wishist</ListItem>

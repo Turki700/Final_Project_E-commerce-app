@@ -30,7 +30,7 @@ const Container = styled.div`
     background-color: #f5fbfd;
     position: relative;
     border-radius: 10px;
-
+    background-color: transparent;
     &:hover ${Info} {
         opacity: 1;
     }

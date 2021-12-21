@@ -29,7 +29,7 @@ const Info = styled.div`
     flex-direction: column;  
 `
 const Title = styled.h1`
-    color: #fff;
+    color: #683d67;
     margin-bottom: 20px;
     font-size: 3rem;
     font-weight: bold;   
@@ -37,8 +37,8 @@ const Title = styled.h1`
 const Button = styled.button`
     border: none;
     padding: 10px;
-    background-color: #fff;
-    color: gray;
+    background-color: #683d67;
+    color: #fff;
     cursor: pointer;
     font-weight: 600;
 `

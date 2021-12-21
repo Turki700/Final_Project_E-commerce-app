@@ -1,42 +1,42 @@
 export const sliderItems = [
   {
     id: 1,
-    img: "https://i.ibb.co/WBCRYy1/pexels-konstantin-mishchenko-1926769.png",
-    title: "WINTER SALE",
-    desc: "Text messaging, or texting, is the act of composing and sending electronic",
-    bg: "f5fafd"
+    img: "https://i.ibb.co/QHxPJ4G/slider-1.png",
+    title: "HYPE WINTER SALE",
+    desc: "It's Time for Winter, try new collections",
+    bg: "fcf1ed"
   },
   {
     id: 2,
     img: "https://i.ibb.co/WBCRYy1/pexels-konstantin-mishchenko-1926769.png",
-    title: "WINTER SALE",
-    desc: "Text messaging, or texting, is the act of composing and sending electronic",
-    bg: "fcf1ed"
+    title: "HYPE WONEN SALE",
+    desc: "strong women",
+    bg: "fbf0f4"
   },
   {
     id: 3,
-    img: "https://i.ibb.co/WBCRYy1/pexels-konstantin-mishchenko-1926769.png",
-    title: "WINTER SALE",
-    desc: "Text messaging, or texting, is the act of composing and sending electronic",
-    bg: "fbf0f4"
+    img: "https://i.ibb.co/LPD6SCR/slider-3.png",
+    title: "HYPE MAN SALE",
+    desc: "new clothes, new collections, new color",
+    bg: "f5fafd"
   },
 ]
 
 export const categories = [
   {
     id: 1,
-    img: "https://images.pexels.com/photos/769733/pexels-photo-769733.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    title: "SHIRT STYLE",
+    img: "https://i.pinimg.com/736x/bb/52/65/bb5265136c607725471d721a7a4c156b.jpg",
+    title: "HYPE CLOTHES",
   },
   {
     id: 2,
-    img: "https://images.pexels.com/photos/4947747/pexels-photo-4947747.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    title: "WINTER STYLE",
+    img: "https://cdn.shopify.com/s/files/1/0381/1793/products/Beyond_Hype_Sticker_Pack_large.jpg?v=1571438626",
+    title: "HYPE ACCESSORIES",
   },
   {
     id: 3,
-    img: "https://images.pexels.com/photos/8055369/pexels-photo-8055369.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    title: "JACKETS STYLE",
+    img: "https://ae01.alicdn.com/kf/HLB1ng3_L6DpK1RjSZFrq6y78VXaz/CuddlyIIPanda.jpg",
+    title: "HYPE BOOTS",
   },
 ];
 

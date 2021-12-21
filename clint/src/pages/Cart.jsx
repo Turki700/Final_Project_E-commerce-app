@@ -63,6 +63,7 @@ const Bottom = styled.div`
 
 const Info = styled.div`
   flex: 3;
+  background-color: #fbeef46e;
 `;
 
 const Product = styled.div`
@@ -134,6 +135,7 @@ const Summary = styled.div`
   border-radius: 10px;
   padding: 20px;
   height: 50vh;
+  background-color: #fbeff4;
 `;
 const SummaryTitle = styled.h1`
   font-weight: 200;
