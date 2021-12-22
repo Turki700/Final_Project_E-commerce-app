@@ -7,8 +7,6 @@
 
 ***hype E-Commerce*** Hi everyone, this applcation for hype products => (hype clothes, hype Accessories, hype boots). We build this app with ❤️.
 
-***dataBASE*** has been developed as a part of the final project in [Ironhack](https://www.ironhack.com/es/desarrollo-web/barcelona?utm_source=google-sea&utm_medium=cpc&utm_campaign=BCN_app_campus_brand_GA_ES&utm_term={keywords}&gclid=Cj0KCQjwo6D4BRDgARIsAA6uN19LKsx0pvTH-iUz-RfrGakzau9RGdhJaixWuX32X92njICzz66RYbAaAncuEALw_wcB) Web Developement bootcamp.
-
 ## User Stories
 
 - **Signup:** As a user I can sign up in the platform so that I can complate payment.
