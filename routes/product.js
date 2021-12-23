@@ -56,7 +56,8 @@ router.get("/", async (req, res) => {
         } else if (qCategory) {
             products = await Product.find({categories: {$in: [qCategory]}})
         } else {
-            products = await Product.find()
+            let size = await Product.find({})
+            products = await Product.aggregate([{ $sample: { size: size.length}}])
         }
 
         res.status(200).json(products)
